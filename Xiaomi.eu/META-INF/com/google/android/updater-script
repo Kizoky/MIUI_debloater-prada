@@ -1,0 +1,51 @@
+getprop("ro.product.device") == "prada" || getprop("ro.build.product") == "prada"  || abort("This package is for \"prada\" devices; this is a \"" + getprop("ro.product.device") + "\".");
+
+set_progress(0.900000);
+ui_print("");
+ui_print("");
+ui_print("Redmi 4 debloater by Kizoky (not finished)");
+mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
+ui_print("Removing bloatware please wait...");
+delete("/system/app/XMRemoteController/");
+delete("/system/app/GoogleTTS/");
+delete("/system/app/HybridPlatform/");
+delete("/system/app/AutoTest/");
+# Needs to be checked if any app will crash upon deleting
+delete("/system/app/MiGalleryLockscreen/");
+
+delete("/system/app/Notes/");
+delete("/system/app/CloudPrint2/");
+# Having doubts about this
+delete("/system/app/MiDrive/");
+
+delete("/system/app/MiuiCompass/");
+delete("/system/app/GoogleCalendarSyncAdapter/");
+delete("/system/app/GoogleContactsSyncAdapter/");
+delete("/system/app/QtiFeedback/");
+delete("/system/app/Stk/");
+# Unknown what's this
+delete("/system/app/Joyose/");
+
+delete("/system/app/PrintSpooler/");
+delete("/system/app/HybridAccessory/");
+# Needs to be checked if any app will crash upon deleting
+delete("/system/app/LiveWallpapersPicker/");
+
+delete("/system/priv-app/MiuiVideo/");
+delete("/system/priv-app/Music/");
+delete("/system/priv-app/YellowPage/");
+# Having doubts about this
+delete("/system/priv-app/MiDrop/");
+
+delete("/system/priv-app/WeatherProvider/");
+unmount("/system");
+ui_print("");
+ui_print("");
+set_progress(1.000000);
+ui_print("Finished!");
+ui_print("Succesfully removed");
+ui_print("x bloatware! + ODEX files");
+ui_print("Made by Kizoky for Redmi 4!");
+ui_print("Don't forget to hit thanks on XDA!");
+ui_print("Updated: 2017.yx.yx.");
+ui_print(" ");
