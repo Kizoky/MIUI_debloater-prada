@@ -31,6 +31,9 @@ delete("/system/app/HybridAccessory/");
 # Needs to be checked if any app will crash upon deleting
 delete("/system/app/LiveWallpapersPicker/");
 
+delete("/data/app/talkback/");
+delete("/data/data-app/talkback/");
+
 delete("/system/priv-app/MiuiVideo/");
 delete("/system/priv-app/Music/");
 delete("/system/priv-app/YellowPage/");
